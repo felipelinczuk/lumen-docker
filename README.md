@@ -16,3 +16,5 @@ select ...
 
 exit
 
+
+apk -U add vim

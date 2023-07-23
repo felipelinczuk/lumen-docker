@@ -7,7 +7,6 @@ RUN apt-get update \
     php8.3-gd \
     php8.3-imap \
     php-yaml \
-    vim \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 WORKDIR /var/www/html/
