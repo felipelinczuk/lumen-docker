@@ -1,0 +1,22 @@
+version: '1.0'
+
+services:
+  lumen:
+    container_name: lumen
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/var/www/html/api
+    build: .
+    command: php -S lumen:8080 -t public
+    restart: always
+
+  db:
+    container_name: mariadb
+    image: mariadb
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: lumentest

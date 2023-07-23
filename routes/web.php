@@ -13,6 +13,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+
+$router->group(['prefix => alunos'], function() use ($router){
+    $router->get('/', 'AlunosController@index');
 });
